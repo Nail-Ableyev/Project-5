@@ -1,0 +1,8 @@
+html, body { height: 100%; margin: 0; padding: 0; }
+
+/*set height to 100 percent in order to show the map. Won't be visible otherwise*/      
+#map {
+ height: 100%;
+ width:  100%;
+ display: inline-block; 
+}
