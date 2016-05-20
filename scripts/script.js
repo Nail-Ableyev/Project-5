@@ -106,12 +106,6 @@ var viewModel=function(){
   });
 }
 ;
-console.log("Y"+suda.phone)
-
-$( "#listofitems" ).click(function() {
-  console.log("Y"+suda.phone);
-});
-
 //Ajax request for Foursquare api. 
 // It doesn't do anythin - just logging info. working on adding telephone to the infowindow
 //
@@ -119,7 +113,7 @@ $( "#listofitems" ).click(function() {
   //url: 'https://api.foursquare.com/v2/venues/search?client_id=Q55FKP4Q4UOLIPVR0ITORHNILDCQDGWLCFM0MA1ZNVTCPAH4&client_secret=CDZRIXAWM1KR3GTHHEUL1REEL14FQOIIK4BENU13N0GOPVNK&v=20130815&ll=51.512969,-0.126213&query=thai',
   url: 'https://api.foursquare.com/v2/venues/search?client_id='+
   foursquareID+'&client_secret='+foursquareKey+'&v=20130815&ll='
-  +curr.lat +',' +curr.lng + '&query=thai',
+  +suda.lat +',' +suda.lng + '&query=thai',
   datatype: 'json',
     success: function(response){
     console.log(response)
