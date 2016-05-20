@@ -124,6 +124,5 @@ $( "#listofitems" ).click(function() {
     success: function(response){
     console.log(response)
   }
-  })
-}
+});
 
