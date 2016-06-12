@@ -1,8 +1,72 @@
-html, body { height: 100%; margin: 0; padding: 0; }
+html, 
+body {
+  height: 100%; margin: 0; padding: 0;
+}
 
 /*set height to 100 percent in order to show the map. Won't be visible otherwise*/      
 #map {
  height: 100%;
  width:  100%;
- display: inline-block; 
+ position: relative; 
 }
+
+#listarea{
+	position: absolute;
+	height:100%;
+	width: 150px;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background:rgba(240,240,240,0.5);
+}
+
+#searchbar{
+	width:100%;
+}
+
+#listofitems{
+	display: block;
+}
+
+input{
+	width: 90%;
+	margin: 3% 2% 2% 2%;
+	padding: 3% 2% 3% 2%;
+}
+
+input:focus{
+	background-color: rgb(240,240,240);
+	border: 2px solid #8dd4f5;
+}
+
+ul{
+	list-style-type: none;
+	padding: 3%;
+	margin: 0;
+}
+
+li {
+    color: black;
+}
+li:nth-child(odd) {
+    background:rgba(240,240,240,0.5);
+}
+li:nth-child(even) {
+    background:rgba(210,210,210,0.5);
+}
+
+#listofitems :hover{
+	background:#8dd4f5;
+	color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+p{
+  background:rgb(210,210,210);
+}
+.winContact{
+  background-color: #8dd4f5;
+  color: white;
+}
+
+

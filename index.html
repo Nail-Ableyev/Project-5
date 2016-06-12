@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title>Thai restaurants</title>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" href="styles/style.css">
+    	<link rel="stylesheet" href="styles/sweetalert.css">
 	</head>
 	<body>
-		<div id='searchbar'>
-			<input type="search" data-bind="textInput:searcher, valueUpdate:'keyup'">
+		<div id='listarea'>
+			<div id='searchbar'>
+				<input placeholder="search" type="search" data-bind="textInput:searcher, valueUpdate:'keyup'">
+			</div>
 
+			<div id='listofitems'>
+				<ul id = 'items' data-bind="foreach:search()">
+					<li class='anitem' data-bind="text:name,click:$parent.setCurrentPlace"></li>
+				</ul>
+			</div>
 		</div>
-		<div id='listofitems'>
-			<ul data-bind="foreach: search()">
-				<li data-bind="text:title"></li>
-			</ul></div>
+		
 		<div id='map'></div>
 		<script src = "scripts/jquery.js"></script>
 		<script src = "scripts/ko.js"></script>
+		<script src = "scripts/sweetalert.min.js"></script>
+		<script async src = "scripts/infobubble.js"></script>
 		<script src = "scripts/script.js"></script>
-				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLh6EAC_EWiDQxAGosVoSYm9mlqcWxNoM&callback=initMap">
+				<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLh6EAC_EWiDQxAGosVoSYm9mlqcWxNoM&callback=initMap">
         </script>
 	</body>
 </html> 
