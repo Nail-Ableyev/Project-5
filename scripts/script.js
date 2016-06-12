@@ -69,7 +69,8 @@ var viewModel=function(){
   var self = this;
   self.observablecafelist = ko.observableArray([]);
   self.searcher = ko.observable('');
-
+//AJAX request to FourSquare. If ".done" populates the list "listofcafes"
+//if ".fail" informs a user
   $.ajax({
   url: 'https://api.foursquare.com/v2/venues/search?client_id='+
   foursquareID+'&client_secret='+foursquareKey+'&v=20130815&ll='
@@ -112,7 +113,7 @@ var viewModel=function(){
       map.panTo(new google.maps.LatLng(self.currentPlace.lat(), self.currentPlace.lng()))
     }
 
-
+//search function that will tooggle on/off visibility of the markers.
     self.search = ko.computed(function(){
     return ko.utils.arrayFilter(self.observablecafelist(), function(point){
       if(point.name().toLowerCase().indexOf(self.searcher().toLowerCase()) >= 0){
