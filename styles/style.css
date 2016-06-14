@@ -1,16 +1,16 @@
 html, 
 body {
-  height: 100%; margin: 0; padding: 0;
+	height: 100%; margin: 0; padding: 0;
 }
 
 /*set height to 100 percent in order to show the map. Won't be visible otherwise*/      
 #map {
- height: 100%;
- width:  100%;
- position: relative; 
+	height: 100%;
+	width:  100%;
+	position: relative; 
 }
 
-#listarea{
+.listarea {
 	position: absolute;
 	height:100%;
 	width: 150px;
@@ -20,26 +20,26 @@ body {
 	background:rgba(240,240,240,0.5);
 }
 
-#searchbar{
+.searchbar {
 	width:100%;
 }
 
-#listofitems{
+.listofitems {
 	display: block;
 }
 
-input{
+input {
 	width: 90%;
 	margin: 3% 2% 2% 2%;
 	padding: 3% 2% 3% 2%;
 }
 
-input:focus{
+input:focus {
 	background-color: rgb(240,240,240);
 	border: 2px solid #8dd4f5;
 }
 
-ul{
+ul {
 	list-style-type: none;
 	padding: 3%;
 	margin: 0;
@@ -48,6 +48,7 @@ ul{
 li {
     color: black;
 }
+
 li:nth-child(odd) {
     background:rgba(240,240,240,0.5);
 }
@@ -55,16 +56,17 @@ li:nth-child(even) {
     background:rgba(210,210,210,0.5);
 }
 
-#listofitems :hover{
+.listofitems :hover{
 	background:#8dd4f5;
 	color: white;
-  font-weight: bold;
-  cursor: pointer;
+  	font-weight: bold;
+  	cursor: pointer;
 }
-p{
+p {
   background:rgb(210,210,210);
 }
-.winContact{
+
+.winContact	{
   background-color: #8dd4f5;
   color: white;
 }
