@@ -79,7 +79,7 @@ var viewModel=function(){
     listofcafes=response.response.venues;
     listofcafes.forEach(function(item){
 //check if response from FourSquare has a phone number
-      if(item.contact.formattedPhone===null){
+      if(item.contact.formattedPhone==null){
         item.contact.formattedPhone="Sorry, no phone number";
       }
     var amarker = new google.maps.Marker({
